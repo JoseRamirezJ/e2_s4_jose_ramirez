@@ -176,6 +176,7 @@ public class Exp2_S4_Jose_Ramirez {
             }
         }while (opcion !=2);
         System.out.println("Hasta la proxima !!!");
+        input.close();
         
         
         // TODO code application logic here

@@ -26,16 +26,16 @@ public class Exp2_S4_Jose_Ramirez {
         
         Boolean validar = true;          // Variable usada para validar entradas
        
-        String[] filas ={"A","B","C","D","E"};        // array usados para graficar asientos
-        String[] columnas = {"1" , "2" , "3" , "4" , "5" };
+        String[] filas ={"A","B","C","D","E","F","G","H","I","J"};        // array usados para graficar asientos
+        String[] columnas = {"1","2","3","4","5","6","7","8","9","10"};
         int [][] ubicacion;          // arrays usados para guardar los datos ingresados
-        ubicacion = new int[5][5];
+        ubicacion = new int[10][10];
         int [][] ubicacionTemporal;
-        ubicacionTemporal = new int[5][5];
-        int[] sector;
-        sector = new int[5];
+        ubicacionTemporal = new int[10][10];
+       // int[] sector;
+      //  sector = new int[5];
         int[] nroAsiento;
-        nroAsiento = new int[5];
+        nroAsiento = new int[10];
         
         do{ // Inicio 
             System.out.println("\n Bienvenido al Tetro Moro");
@@ -71,19 +71,19 @@ public class Exp2_S4_Jose_Ramirez {
                 System.out.println("\n Elija un sector ( A,B,C,D,E ) y un numero de asiento (1 al 5) que se encuentre sin reserva");
                 System.out.println("        R = Asiento reservado  /  SR = Asiento sin reserva ");
                 System.out.println("");
-                System.out.println("\n     (1)   (2)   (3)   (4)   (5)");     // Logica realizada para
+                System.out.println("\n     (1)   (2)   (3)   (4)   (5)   (6)   (7)   (8)   (9)   (10)");     // Logica realizada para
                 for (i = 0 ; i < filas.length ; i++){            // mostrar ubicaciones vacias 
                     System.out.print("("+ filas[i]+ ") ");
                     for (j = 0 ; j < nroAsiento.length ; j++){     // y ocupadas
                         if (ubicacion[i][j] == 0){
                             System.out.print("  SR  ");
                         } else {//
-                            System.out.print("  R  ");
+                            System.out.print("   R  ");
                         }
                     }System.out.println("\n");
                 }
                 do {
-                System.out.println("Ingrese Sector ( A , B , C , D , E ) ");       //Ingreso de selección columna de asientos
+                System.out.println("Ingrese Sector ( A , B , C , D , E , F , G , H , I , J ) ");       //Ingreso de selección columna de asientos
                 do {
                 selSector = input.next().toUpperCase();
                 for (i = 0 ; i < filas.length ; i++){
@@ -93,12 +93,12 @@ public class Exp2_S4_Jose_Ramirez {
                         break;
                     }
                 }
-                if (i > 4) {          //Validacion de ingreso
-                        System.out.println("Ingreso incorrecto, debe ser (A , B , C , C , D , E)");
+                if (i > 9) {          //Validacion de ingreso
+                        System.out.println("Ingreso incorrecto, debe ser (A , B , C , D , E , F , G , H , I , J)");
                         validar = false;
                     }
                 }while (!validar);
-                System.out.println("Ingrese Numero de asiento (1 al 5)");     //Ingreso de selección de fila de asiento
+                System.out.println("Ingrese Numero de asiento (1 al 10)");     //Ingreso de selección de fila de asiento
                 do {
                 selAsiento = input.next();
                 for (i =0 ; i < columnas.length ; i++) {
@@ -108,7 +108,7 @@ public class Exp2_S4_Jose_Ramirez {
                         break;
                     }
                 }
-                if (i >4) {       //Validación de ingreso
+                if (i > 9) {       //Validación de ingreso
                     System.out.println("Ingreso incorrecto, deber estar entre 1 y 5");
                     validar = false;
                 }
@@ -177,9 +177,6 @@ public class Exp2_S4_Jose_Ramirez {
         }while (opcion !=2);
         System.out.println("Hasta la proxima !!!");
         input.close();
-        
-        
-        // TODO code application logic here
     }
     
 }
